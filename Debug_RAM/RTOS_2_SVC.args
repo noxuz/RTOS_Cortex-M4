@@ -1,0 +1,13 @@
+-T
+"C:/Users/noxuz/workspaceS32DS.ARM.2.2/RTOS_2_SVC/Project_Settings/Linker_Files/S32K142_32_ram.ld"
+-Wl,-Map,"RTOS_2_SVC.map"
+-Xlinker
+--gc-sections
+-n
+-mcpu=cortex-m4
+-specs=nosys.specs
+--sysroot="C:/NXP/S32DS_ARM_v2.2/S32DS/build_tools/gcc_v6.3/gcc-6.3-arm32-eabi/arm-none-eabi/newlib"
+"./Project_Settings/Startup_Code/startup.o"
+"./Project_Settings/Startup_Code/startup_S32K142.o"
+"./Project_Settings/Startup_Code/system_S32K142.o"
+"./src/main.o"
