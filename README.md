@@ -1,5 +1,5 @@
-# Real Time Operating System for NXP S32K1 automotive-grade MCU
+# Real Time Operating System for ARM Cortex M4F microcontroller
 
-Implementation of a Real time operating system, with a round-robin scheduling algorithm.
-
+Implementation of an RTOS with a round-robin scheduling algorithm.
+Source of contect switch routines found at src/osKernel.c
 
