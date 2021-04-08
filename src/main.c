@@ -1,6 +1,9 @@
 /*
- * main implementation: use this 'C' sample to create your own application
+ * Abraham Rodriguez Vazquez
+ * Round Robin RTOS for the ARM Cortex-M4 microntroller
  *
+ * Description: The 4 threads are added to the scheduler and context-switch
+ * is performed at each interrupt of the SysTick.
  */
 
 #include "S32K142.h"
@@ -53,11 +56,11 @@ void task3(void)
 
 int main(void)
 {
-/* añadir threads */
 
+    /* Add the 4 threads to the kernel */
     osKernelAddThreads(task0, task1, task2,task3);
 
-    /* Arrancar */
+    /* Setup and launch of the OS */
     osKernelLaunch(QUANTA);
     osSchedulerLaunch();
 
