@@ -22,20 +22,29 @@ void task0(void)
     while(1)
     {
         count0++;
-        //S32_SCB->ICSR |= 1<<26;
+        
+        // Example for yielding the thread, i.e. pending a systick interrupt
+        //S32_SCB->ICSR |= 1<<26; 
     }
 }
 
 void task1(void)
 {
+    
+    // Exampe for yielding the thread
     while(1)
-    {count1++;
+    {
+        count1++;
+     
+        // Restart value of systick and pend a systick interrupt for yielding the thread
         S32_SysTick->CVR = 0;
         INTCTRL = 0x04000000;
 
 
     }
 }
+
+// Thread with a simple incrementing variable
 void task2(void)
 {
     while(1)
@@ -45,6 +54,7 @@ void task2(void)
     }
 }
 
+// Thread with a simple incrementing variable
 void task3(void)
 {
     while(1)
